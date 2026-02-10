@@ -700,6 +700,22 @@ footer {
     align-items: center;
 }
 
+.social-links-footer {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links-footer a {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.social-links-footer a:hover {
+    color: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
 /* Animations */
 .fade-in-up {
     opacity: 0;
