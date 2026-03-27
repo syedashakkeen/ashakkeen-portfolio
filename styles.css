@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #050505;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.05);
-    --text-primary: #ffffff;
-    --text-secondary: #a3a3a3;
-    --accent-primary: #00e676;
-    --accent-secondary: #00b0ff;
-    --gradient-main: linear-gradient(90deg, #00e676, #00b0ff);
+    --bg-color: #0D3B66;
+    --card-bg: rgba(250, 240, 202, 0.05);
+    --card-border: rgba(250, 240, 202, 0.15);
+    --text-primary: #FAF0CA;
+    --text-secondary: rgba(250, 240, 202, 0.7);
+    --accent-primary: #FAF0CA;
+    --accent-secondary: rgba(250, 240, 202, 0.5);
+    --gradient-main: linear-gradient(90deg, #FAF0CA, rgba(250, 240, 202, 0.7));
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -53,7 +53,7 @@ body {
 .cursor-outline {
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(250, 240, 202, 0.5);
     transition: width 0.2s, height 0.2s, background-color 0.2s, left 0.1s, top 0.1s;
 }
 
@@ -122,7 +122,7 @@ a {
 .btn-primary:hover {
     background: var(--accent-primary);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 242, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(250, 240, 202, 0.3);
 }
 
 .btn-secondary {
@@ -138,7 +138,7 @@ a {
 
 .btn-secondary:hover {
     border-color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
 }
 
 .section-header {
@@ -175,10 +175,10 @@ a {
 }
 
 .navbar.scrolled {
-    background: rgba(5, 5, 5, 0.8);
+    background: rgba(13, 59, 102, 0.9);
     backdrop-filter: blur(10px);
     padding: 1rem 5%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--card-border);
 }
 
 .logo {
@@ -354,7 +354,7 @@ a {
 /* Skills Section */
 .skills-section {
     padding: 8rem 0;
-    background: linear-gradient(to bottom, var(--bg-color), #080808);
+    background: linear-gradient(to bottom, var(--bg-color), #092847);
 }
 
 .skills-grid {
@@ -526,7 +526,7 @@ a {
 /* Services */
 .services-section {
     padding: 8rem 0;
-    background: #080808;
+    background: #092847;
 }
 
 .services-list {
@@ -783,7 +783,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: #050505;
+        background: var(--bg-color);
         flex-direction: column;
         padding: 2rem;
         border-bottom: 1px solid var(--card-border);
