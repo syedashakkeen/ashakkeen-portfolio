@@ -221,6 +221,8 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
     padding: 0 10%;
     position: relative;
     overflow: hidden;
@@ -251,12 +253,10 @@ a {
 }
 
 .hero-visual {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 450px;
-    height: 600px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -267,19 +267,18 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-    /* border-radius: 20px; Removed for no-bg feel */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    /* Shows full image */
+    object-fit: cover;
     position: relative;
     z-index: 2;
-    /* Removed border and box-shadow to achieve 'remove background' look for the container */
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
-    /* Use drop-shadow instead if image is transparent later */
 }
 
 .glow-shape {
@@ -750,6 +749,28 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 120px;
+        padding-bottom: 4rem;
+        gap: 3rem;
+    }
+    
+    .hero-content {
+        margin: 0 auto;
+    }
+    
+    .badge {
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    .cta-group {
+        justify-content: center;
+        display: flex;
+    }
+
     h1 {
         font-size: 3rem;
     }
@@ -760,7 +781,9 @@ footer {
     }
 
     .hero-visual {
-        opacity: 0.15;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
     }
 
     .cursor-dot,
@@ -798,19 +821,24 @@ footer {
     }
 
     .hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
+        padding-top: 100px;
     }
 
-    .hero-content {
-        margin: 0 auto;
+    .hero-visual {
+        width: 250px;
+        height: 250px;
     }
 
     .cta-group {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .cta-group a {
+        margin: 0 !important;
+        width: 100%;
+        text-align: center;
     }
 
     .skills-grid,
