@@ -135,4 +135,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start typing
     type();
+
+    // EmailJS Integration
+    (function () {
+        emailjs.init("jsecFOqsUfOipJnqB");
+    })();
+
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Store original button text
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+
+            emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this)
+                .then(() => {
+                    alert("Message sent successfully!");
+                    this.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, (error) => {
+                    alert("Failed to send message: " + JSON.stringify(error));
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
 });
