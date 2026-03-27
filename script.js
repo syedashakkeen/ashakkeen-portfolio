@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = "Sending...";
             submitBtn.disabled = true;
 
-            emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this)
+            emailjs.sendForm("service_auiff18", "template_7fgq63y", this)
                 .then(() => {
                     alert("Message sent successfully!");
                     this.reset();
